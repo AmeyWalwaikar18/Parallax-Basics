@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Container</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .box{
+            display: flex;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            width: 200px;
+            height: 50px;
+        }
+        /* jab kisi flex ke pure wrapper mai kuch css add karni ho toh ye properties use karna*/
+        .wrapper{
+            display: flex;
+            /* flex properties */
+
+            /* flex direction */
+            /* ye property main axis ko cross axis mai and vice versa convert kardeti hai */
+            /* flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse;
+            flex-direction: row; */
+
+            /* flex wrap */
+            /* ye property se responsivness aayegi */
+            /* flex-wrap: wrap; */
+            /*flex-wrap: wrap-reverse; */
+
+            /* justify content */
+            /* ye property se jo flex items hai woh apni main axis pe align ho jaenge(horizontally) */
+            /* justify-content: space-around;
+            justify-content: space-evenly;
+            justify-content: space-between;
+            justify-content: flex-start;
+            justify-content: flex-end; */
+            justify-content: center;
+            gap: 10px;
+
+            /* align items */
+            /* ye property se jo flex items hai woh apni cross axis pe align hojaenge(vertically) */
+            align-items: center;
+            align-items: flex-end;
+            align-items: flex-start;
+            align-items: stretch;
+            align-items: baseline;
+
+            /* align content */
+            /* do rows ke saath agar khelna ho toh then ye property use karo */
+            align-content: space-between;
+            align-content: stretch;
+            align-content: flex-end;
+            align-content: flex-start;
+            align-content: space-around;
+            align-content: center;
+        }
+
+        /* flex-item properties */
+        /* ye properties directly particular flex items par apply hoti hai */
+        /* order */
+        /* flex grow */
+        /* flex shrink */
+        /* flex basis */
+        /* align self */
+        #box-1{
+            order: 3;
+            /* flex-grow: 1; */
+        }
+        #box-2{
+            align-self: stretch;
+            order: 2;
+            flex-shrink: 4;
+        }
+
+        #box-3{
+            order: 1;
+            width: 200px;
+            height: 50px;
+            flex-basis: 200px;
+            align-self: flex-end;
+        }
+        #box-4{
+            order: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box" id="box-1">Box-1</div>
+        <div class="box" id="box-2">Box-2</div>
+        <div class="box" id="box-3">Box-3nfiebiuojnbcebbif </div>
+        <div class="box" id="box-4">Box-4</div>
+    </div>
+    
+</body>
+</html>
